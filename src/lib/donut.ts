@@ -78,7 +78,7 @@ export function xyzRot(points: Vec3[], [x,y,z]: Vec3): Vec3[] {
 //
 // Leaves the z the same.
 export function perspective(p: Vec3, viewGap: number): Vec3 {
-   const zFactor = viewGap / p[2];
+		const zFactor = viewGap / Math.pow(p[2] / 10, 3);
 
     return [
         p[0] * zFactor,
